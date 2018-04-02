@@ -10,9 +10,15 @@
 				<div id="app" class="container">
 					<div class="row">
 						<div class="col-md-12 jumbotron text-center">
-							<h1 id="today"></h1>
+							<h1><script type="text/javascript">
+								let todayDate = new Date();
+								let daysOfWeek = ["יום ראשון", "יום שני", "יום שלישי", "יום רביעי", "יום חמישי", "יום ששי", "שבת קודש"];
+								let todayWeek = daysOfWeek[todayDate.getDay()];
+								document.write(todayWeek);
+							</script>, 
 							<script type="text/javascript" charset="utf-8"
- src="//www.hebcal.com/etc/hdate-he.js"></script>
+ src="//www.hebcal.com/etc/hdate-he.js"></script></h1>
+ 						<h3 id="today"></h3>
 						</div>
 						</div>
 						<div class="row text-center">
@@ -22,6 +28,7 @@
 						</div>
 					</div>
 				</div>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/he.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
 				<script src="app.js"></script>
