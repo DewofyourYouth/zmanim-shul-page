@@ -1,5 +1,5 @@
 function setup(){
-				loadJSON("http://www.hebcal.com/shabbat/?cfg=json&geo=geoname&amp;geonameid=295277&amp;D=on&amp;lg=h&amp;m=50&amp;o=on&amp;cfg=j&amp;tgt=_top", gotData);
+				loadJSON("http://www.hebcal.com/shabbat/?cfg=json&geo=geoname&amp;geonameid=295277&amp;D=on&amp;lg=h&amp;m=50&amp;o=on&amp;cfg=j&amp;tgt=_top", gotData, jsonp);
 
 }
 
