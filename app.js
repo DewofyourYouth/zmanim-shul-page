@@ -8,7 +8,10 @@ function gotData(data){
 	let parsha = data.items[7].title;
 	let candlelighting = data.items[6].title;
 	let havdala = data.items[8].title;
-	document.getElementById('today').innerHTML = today
+	let todayDate = new Date();
+	let daysOfWeek = ["יום ראשון", "יום שני", "יום שלישי", "יום רביעי", "יום חמישי", "יום ששי", "יום שבת"];
+	let todayWeek = daysOfWeek[todayDate.getDay()];
+	document.getElementById('today').innerHTML = todayWeek + ", " + today;
 	document.getElementById('parsha').innerHTML = "פרשת השבוע: " + parsha;
 	document.getElementById('candlelighting').innerHTML = candlelighting;
 	document.getElementById('havdala').innerHTML =  havdala;
