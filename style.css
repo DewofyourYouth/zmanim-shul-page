@@ -1,3 +1,7 @@
 body {
 	direction: rtl!important;
 }
+
+.jumbotron {
+	border-radius: 0!important;
+}
