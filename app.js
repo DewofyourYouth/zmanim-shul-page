@@ -10,6 +10,7 @@ shabbatTimes.open('GET', 'https://www.hebcal.com/shabbat/?cfg=json&geo=geoname&a
 shabbatTimes.onload = function() {
 	const zmanim = JSON.parse( shabbatTimes.responseText );
 	document.getElementById('info').innerHTML = "";
+	document.getElementById('location').innerHTML = zmanim.location.city;
 	for(let i = 0; i < zmanim.items.length; i++){
 		if(zmanim.items[i].category != 'holiday' || zmanim.items[i].date == today || zmanim.items[i].yomtov == true){
 			document.getElementById('info').innerHTML += `
