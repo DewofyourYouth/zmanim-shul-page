@@ -1,9 +1,9 @@
 const shabbatTimes = new XMLHttpRequest();
-const d = new Date();
-const dayOfWeek = d.getDay();
-const date = d.toISOString();
+let d = new Date();
+var now =  moment().format();
+let dayOfWeek = d.getDay();
 let daysOfWeek = ["יום ראשון", "יום שני", "יום שלישי", "יום רביעי", "יום חמישי", "יום ששי", "שבת קודש"];
-const today = date.substr(0, 10);
+let today = now.substr(0, 10);
 
 console.log(today);
 shabbatTimes.open('GET', 'https://www.hebcal.com/shabbat/?cfg=json&geo=geoname&amp;geonameid=295432&amp;lg=h&amp;m=50&amp;o=on&amp;cfg=j&amp;tgt=_top');
