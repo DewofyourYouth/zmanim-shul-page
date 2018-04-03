@@ -22,7 +22,7 @@ shabbatTimes.onload = function() {
 shabbatTimes.send();
 
 const jewishCal = new XMLHttpRequest();
-jewishCal.open('GET', 'http://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&o=on&min=on&d=onmod=on&nx=on&year=now&month=x&ss=on&mf=on&c=on&geo=geoname&geonameid=295432&m=50&s=on');
+jewishCal.open('GET', 'https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&o=on&min=on&d=onmod=on&nx=on&year=now&month=x&ss=on&mf=on&c=on&geo=geoname&geonameid=295432&m=50&s=on');
 jewishCal.onload = function() {
 	const jewCal = JSON.parse(jewishCal.responseText);
 	let i = 0;
