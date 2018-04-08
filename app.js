@@ -6,7 +6,7 @@ let daysOfWeek = ["יום ראשון", "יום שני", "יום שלישי", "י
 let today = now.substr(0, 10);
 
 console.log(today);
-shabbatTimes.open('GET', 'http://www.hebcal.com/shabbat/?cfg=json&geonameid=295432&m=50');
+shabbatTimes.open('GET', 'https://www.hebcal.com/shabbat/?cfg=json&geonameid=295432&m=50');
 shabbatTimes.onload = function() {
 	const zmanim = JSON.parse( shabbatTimes.responseText );
 	document.getElementById('info').innerHTML = "";
@@ -14,7 +14,7 @@ shabbatTimes.onload = function() {
 	for(let i = 0; i < zmanim.items.length; i++){
 		
 			document.getElementById('info').innerHTML += `
-			<div class="col-md-3" style="display: inline-block; padding: 30px;">${zmanim.items[i].category}</div>
+			<div class="col-md-3" style="display: inline-block; padding: 30px;">${zmanim.items[i].hebrew}</div>
 			`;
 		
 		
