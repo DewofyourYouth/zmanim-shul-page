@@ -14,7 +14,7 @@ shabbatTimes.onload = function() {
 	for(let i = 0; i < zmanim.items.length; i++){
 		
 			document.getElementById('info').innerHTML += `
-			<div class="col-md-3" style="display: inline-block; padding: 30px;">${zmanim.items[i].title}</div>
+			<div class="col-md-3" style="display: inline-block; padding: 30px;">${zmanim.items[i].category}</div>
 			`;
 		
 		
